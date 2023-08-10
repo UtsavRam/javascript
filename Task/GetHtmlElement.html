@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Html Element </title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="first" id="first" /> <br> <br>
+        <input type="text" name="first" id="second" /> <br> <br>
+        <button onclick="handleevent()">Resurt</button>
+    </form>
+    <script>
+        function handleevent()
+        {
+            let a = parseInt(document.getElementById('first').value);
+            let b = parseInt(document.getElementById('second').value);
+
+            alert(a + b);
+
+            let c = parseInt(document.getElementById('first').value);
+            let d = parseInt(document.getElementById('second').value);
+
+            alert(c - d);
+
+
+            let e = parseInt(document.getElementById('first').value);
+            let f = parseInt(document.getElementById('second').value);
+
+            alert(e * f);
+        }
+    </script>
+</body>
+</html>
