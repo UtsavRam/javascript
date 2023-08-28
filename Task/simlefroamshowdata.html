@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simle froam</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: black;
+            color: white;
+        }
+    .mindiv
+    {
+       border: 1px solid white;
+       height: 300px;
+       width: 700px;
+       margin: 0 auto;
+       text-align: center;
+       margin-top: 20px;
+    }
+    .formall
+    {
+        font-size: 20px;
+    }
+    .from1 , .from2 , .from3 , .from4
+    {
+        display: flex;
+       justify-content: space-around;
+       margin-top: 20px;
+       margin-left: -40px;
+    }
+    button
+    {
+        background-color: white;
+        color: black;
+        height: 50px;
+        width: 80px;
+        border-radius: 10px;
+        line-height: 30px;
+        border: none;
+    margin-top: 20PX;
+    }
+    div[id*="display"]{
+        width: 300px;
+        height: 50px;
+        margin: 20px auto;
+        border: 1px solid red;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="mindiv">
+           
+                <div class="formall">
+        <div class="from1">
+            <label for="username">username</label>
+            <input type="text" name="UNO" id="uname" onblur="validate(this , 'Error' , ' name')">
+            <span id="Error"></span>
+        </div>
+        <div class="from2">
+            <label for="password">password</label>
+            <input type="text" name="UNO" id="upass" onblur="validate(this , 'Error2' , ' password')">
+            <span id="Error2"></span>
+        </div>
+        <div class="from3">
+            <label for="email">email</label>
+            <input type="text" name="UNO" id="uemail" onblur="validate(this , 'Error3' , ' email')">
+            <span id="Error3"></span>
+        </div>
+        <div class="from4">
+            <label for="tel">tel no</label>
+            <input type="tel" name="UNO" id="utel" onblur="validate(this , 'Error4' , ' tel')">
+            <span id="Error4"></span>
+        </div>
+    </div>
+    <div class="btn">
+        <button onclick="show()">Submit</button>
+    </div>
+    
+</div>
+<div id="display1"></div>
+<div id="display2"></div>
+<div id="display3"></div>
+<div id="display4"></div>
+</body>
+<script>
+    function validate (a, spanid , msg)
+    {
+        if(a.value == "")
+        {
+            document.getElementById(spanid).style.color = "red"
+            document.getElementById(spanid).innerText = "This filed" + msg
+        }
+        else
+        {
+            document.getElementById(spanid).innerText = ""
+        }
+    }
+
+    function show() {
+        document.getElementById('display1').innerText = document.getElementById("uname").value;
+        document.getElementById('display2').innerText = document.getElementById("upass").value;
+        document.getElementById('display3').innerText = document.getElementById("uemail").value;
+        document.getElementById('display4').innerText = document.getElementById("utel").value;
+    }
+    
+</script>
+
+</html>

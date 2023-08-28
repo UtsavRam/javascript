@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+     <input type="text" name="UNO" id="UNO" onblur="run(this)">
+     <span id="Show"></span>
+     <input type="email" placeholder="Email" name="UNO" id="UNO" onblur="run(this)">
+     <span id="Show1"></span>
+
+     <script>
+        function run(utsav) 
+        {
+            if(utsav.value == "")
+            {
+                document.getElementById("Show").style.color = "red"
+                document.getElementById("Show").innerText = "this Filed "
+            }
+            else
+            {
+                document.getElementById("Show").innerText = ""
+            }
+        }
+     </script>
+</form>
+</body>
+</html>

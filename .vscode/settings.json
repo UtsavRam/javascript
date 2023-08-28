@@ -1,0 +1,9 @@
+{
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "files.autoGuessEncoding": false,
+    "window.autoDetectColorScheme": false,
+    "window.closeWhenEmpty": false,
+    "window.commandCenter": false,
+    "outline.showModules": true,
+    "outline.showNamespaces": true
+}

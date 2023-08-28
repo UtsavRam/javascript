@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Validation</title>
+</head>
+
+<body>
+    <input type="text" name="uname" id="uname" onblur="validate(this, 'showErrorName', 
+    ' Name')">
+    <span id="showErrorName"></span>
+    <br>
+    <input type="text" name="upass" id="upass" onblur="validate(this, 'showErrorPass', 
+    ' PassWord')">
+    <span id="showErrorPass"></span>
+
+</body>
+    <script>
+        function validate(anything, spnid, msg) {
+            // let username = document.getElementById("uname").value 
+            // console.log(username);
+            // console.log(anything.value);
+        //    let a =  document.getElementById("showError").innerText = "This Field Is Required"
+        //    console.log(a);
+
+        if(anything.value == ""){
+            // document.getElementById("showError").style.color = "red"
+            // document.getElementById("showError").innerText = "This Field Is Required"
+            document.getElementById(spnid).style.color = "red"
+            document.getElementById(spnid).innerText = "This Field Is Required" + msg
+          }
+          else{
+            // document.getElementById("showError").innerText = ""
+            document.getElementById(spnid).innerText = ""
+
+        }
+
+        }
+    </script>
+    
+
+
+</html>
