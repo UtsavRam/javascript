@@ -15,5 +15,25 @@ button
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: transfrom 80ms ease-in;
+}
+button:active
+{
+    transform: scale(0.95);
+}
+button:focus
+{
+    outline: none;
+}
+button.ghost
+{
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+input
+{
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
 }
