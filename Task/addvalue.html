@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button
+        {
+        margin-inline: 5px;        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" name="" id="in" value="">
+   
+    <button onclick="add()">
+        Add
+    </button>
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        var task = document.getElementById('in');
+        var Mainlist = document.getElementById('list');
+        console.log(task);
+           function add()
+          {
+         if (task.value=="")
+         {
+            alert("please add some task !...");
+         }
+         else{
+            var inputval = task.value;
+            var NewtasK = document.createElement('li');
+              NewtasK.appendChild(document.createTextNode(inputval));
+              task.value="";
+              Mainlist.appendChild(NewtasK);
+             var delbtn = document.createElement('button');
+             var editbtn = document.createElement('button');
+             delbtn.innerHTML="Delete";
+             editbtn.innerHTML="Edit";
+            
+         
+             console.log(delbtn,editbtn);
+
+             delbtn.addEventListener('click',()=>{
+                 NewtasK.remove();
+             })
+             editbtn.addEventListener('click',()=>{
+                var editedtask = prompt("edit your task :");
+                     NewtasK.innerText=editedtask;
+             Mainlist.appendChild(NewtasK);
+
+             })
+             NewtasK.appendChild(delbtn);
+             NewtasK.appendChild(editbtn);
+             
+
+
+        
+
+
+        
+
+              
+
+         }
+          }
+    </script>
+</body>
+</html>

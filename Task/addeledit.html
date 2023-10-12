@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+</head>
+
+<body>
+    <input type="text" name="" id="in">
+
+    <button onclick="add()">
+        add
+    </button>
+    <ul id="list">
+
+    </ul>
+</body>
+<script>
+    var task = document.getElementById('in');
+    var Mainlist = document.getElementById('list');
+
+    function add() {
+        if (task.value == "") {
+            alert("enter the number...!");
+        }
+        else {
+            var inputval = task.value;
+            var newtask = document.createElement('li');
+
+            newtask.appendChild(document.createTextNode(inputval));
+            task.value = '';
+            // console.log(newtask);
+            Mainlist.appendChild(newtask);
+
+            var delbtan = document.createElement('button');
+            var editbtn = document.createElement('button');
+            delbtan.innerHTML = 'Delete';
+            editbtn.innerHTML = 'Edit';
+            // console.log(delbtan);
+
+            delbtan.addEventListener('click', () => {
+                newtask.remove();
+            })
+            editbtn.addEventListener('click', () => {
+                var editedtask = prompt("edit your task :");
+                newtask.innerText = editedtask;
+                Mainlist.appendChild(newtask);
+
+            })
+
+            newtask.appendChild(delbtan);
+            newtask.appendChild(editbtn);
+        }
+    }
+</script>
+
+</html>
