@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+   header{
+    border: 1px solid black;
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+   }
+   .company-brand,nav,.actions{
+    border: 1px solid black;
+   }
+   nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   nav ul li{
+    display: inline-block;
+    padding: 20px;
+   }
+   #output
+   {
+    height: 80px;
+    width: 300px;
+    border: 1px solid black;
+     margin-top: 100px;
+     margin-left: 500px;
+    display: flex;
+    align-items: center;
+   }
+   button
+   {
+    border: none;
+   }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="company-brand">
+
+        </div>
+        <nav>
+    <ul>
+        <li> <button onclick="add" id="home">Home</button> </li> 
+        <li> <button onclick="add" id="about us">About us</button></li>
+        <li> <button onclick="add" id="Contact">Contact</button></li>
+        <li> <button onclick="add" id="News">News</button></li>
+        
+    </ul>
+        </nav>
+        <div class="actions">
+
+        </div>
+    </header> 
+
+
+    <div id="output">
+
+    </div>
+</body>
+<script>
+     var task = document.getElementById('home');
+   
+     function add() {
+        if (task.value ==""){
+                alert("this number");
+        }
+        else {
+            var nav = task.value;
+        }
+    }
+</script>
+</html>
