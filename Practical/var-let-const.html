@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var x = 10;  // declaration
+        var x = 20;  // re-declaration is allowed
+        x = "var" // re-assignment allowed
+        document.write(x);
+        console.log(x);
+        alert("var => declaration, re-declaration and re-assignment allowed")
+        document.write("<br>");
+        document.write("<br>");
+
+
+        let y = 30;  // declaration
+        // let y = 40;  // re-declaration is not allowed
+        y = "let";  // re-assignment allowed
+        document.write(y);
+        console.log(y);
+        alert("let => declaration is allowed and re-assignment allowed")
+        document.write("<br/>");
+        document.write("<br/>");
+
+
+        const z = "const";  // declaration
+        // const z = 50;  // re-declaration is not allowed
+        // z = "const"  // re-assignment is not allowed
+        document.write(z);
+        console.log(z);
+        alert("const=> onlay declaration allowed");
+    </script>
+</body>
+</html>
