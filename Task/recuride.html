@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+Frist Name :- <input type="text" name="UP" id="Fname" onblur="validate(this , 'Erorr' , 'firstname')"> <br>
+<span id="Erorr"></span> <br>
+
+Last Name :- <input type="text" name="UP" id="Lname" onblur="validate(this , 'Error2' , 'Lastname')"> <br>
+<span id="Error2"></span> <br>
+<input type="submit" value="submit" onclick="spnid">
+
+<script>
+    function validate(x, spnid , msg)
+    {
+       if(x.value == "")  
+       {
+          document.getElementById(spnid).style.color = "red"
+          x.style.border = "5px solid red"
+          document.getElementById(spnid).innerText = "Plz enater" + msg
+       }  
+       else
+       {
+        document.getElementById(spnid).innerText = ""
+        x.style.border = "5px solid green"
+       }
+    }
+</script>
+
+</body>
+</html>

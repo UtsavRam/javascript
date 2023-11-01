@@ -10,7 +10,7 @@
 <body>
     <input type="text" name="uname" id="uname" onblur="validate(this, 'showErrorName', 
     ' Name')">
-    <span id="showErrorName"></span>
+    <span id="showErrorName"></span> 
     <br>
     <input type="text" name="upass" id="upass" onblur="validate(this, 'showErrorPass', 
     ' PassWord')">
@@ -28,8 +28,8 @@
         if(anything.value == ""){
             // document.getElementById("showError").style.color = "red"
             // document.getElementById("showError").innerText = "This Field Is Required"
-            document.getElementById(spnid).style.color = "red"
-            document.getElementById(spnid).innerText = "This Field Is Required" + msg
+             document.getElementById(spnid).style.color = "red"
+             document.getElementById(spnid).innerText = "This Field Is Required" + msg
           }
           else{
             // document.getElementById("showError").innerText = ""

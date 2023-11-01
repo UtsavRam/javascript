@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>requirement</title>
+</head>
+<body>
+    
+  First Name :-  <input type="text" name="UP" id="Firstname" onblur="Validite(this , 'Erorr' , 'firstname')"> <br>
+  <span id="Erorr"></span><br>
+
+  Last Name :- <input type="text" name="UP" id="Lastname" onblur="Validite(this , 'Error2' , 'Lastname')"> <br>
+  <span id="Error2"></span>
+
+  <script>
+    function Validite(x, spaid, msg)
+    {
+        if(x.value == "")
+        {
+            document.getElementById(spaid).style.color = "red"
+            x.style.border = "5px solid red"
+            document.getElementById(spaid).innerText = "Plz Enter" + msg
+        }
+        else
+        {
+            document.getElementById(spaid).innerText = ""
+            x.style.border = "5px solid green"
+        }
+    }
+  </script>
+      
+</body>
+</html>
