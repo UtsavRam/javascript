@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="cavunt"></h1>
+    <p id="para"></p>
+    <a href="" id="atag"></a>
+
+    <script>
+        h1_tag = document.getElementById("cavunt");
+          
+
+        x = 0;
+
+        function speed()
+        {
+             if(x<=880)
+             {
+                h1_tag.innerHTML = (x)
+                x++
+                setTimeout("speed()")
+             }
+        }
+
+        // speed()
+        //  setInterval("speed()")
+           speed()
+
+
+
+
+           
+        p_tag = document.getElementById("para");
+
+        y =100;
+
+        function xyz()
+        {
+
+            if (y>=0)
+            {
+                p_tag.innerHTML = (y)
+                --y
+                setTimeout("xyz()",80)
+            }
+        }
+        // setInterval("xyz");
+           xyz()
+
+
+
+
+          a_tag = document.getElementById("atag");
+
+          z = 0;
+
+          function  aposible()
+          {
+
+             if (z<=880)
+              {
+              a_tag.innerHTML = (z);
+              z++
+              setTimeout("aposible()")
+              }
+          }
+        //   setInterval("aposible()")
+
+            aposible()
+
+    </script>
+</body>
+</html>

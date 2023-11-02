@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="text-1" onclick=" ChangeText()">Usatv</h1>
+
+    <h2 id="text-2" ondblclick=" ChangeText_2()" > click me</h2>
+
+    <p id="text-3" onmouseenter="ChangeText_3()">bye..................!</p>
+
+    <h3 id="text-4" onmouseleave="ChangeText_4()">Good Mornig</h3>
+
+    <h4 id="text-5" onclick="ChangeText_5()">Don</h4>
+
+
+    Onfocus= Firsat Name :- <input type="text" placeholder="Enter Your Firsat Name" onfocus="ChangeText_6()" id="text-6"> <br> <br>
+
+    Onblur = Last Name   :-   <input type="text" placeholder="Enter Your Last Name" onblur="ChangeText_7()" id="text-7"> <br> <br>
+ 
+    KeyPress = Mobile No :-  <input type="text" placeholder="Enter Your Mobile Number" onkeypress="ChangeText_8()"  id="text-8"> <br> <br>
+
+    KeyDown = Email :- <input type="email" placeholder="Enter Your Email" onkeydown="ChangeText_9()" id="text-9"> <br><br>
+
+    KeyUp = address :- <input type="text" placeholder="Enter Your Address" onkeyup="ChangeText_10()" id="text-10">
+     <script>
+        h1_tag = document.getElementById("text-1");
+
+            function ChangeText()
+            {
+                h1_tag.innerHTML = "Ram"
+            }
+             
+        h2_tag = document.getElementById("text-2")
+        
+           function ChangeText_2()
+           {
+               h2_tag.innerHTML = "Hello Ram Utsav"
+           }
+
+        p_tag = document.getElementById("text-3")   
+        
+          function ChangeText_3()
+          {
+              p_tag.innerHTML = "bye....................................................!"
+          }
+
+        h3_tag = document.getElementById("text-4")
+        
+           function ChangeText_4()
+           {
+              h3_tag.innerHTML = "Sall Sall Ave Good Nighat"
+           }
+
+       h4_tag = document.getElementById("text-5")
+           
+           function ChangeText_5 ()
+           {
+                h4_tag.innerHTML = "jon he Banga Don"
+           }
+
+       input_tag = document.getElementById("text-6")
+       
+            function ChangeText_6()
+            {
+                input_tag.value = "Utsav"
+                // console.log("hello")
+            }
+
+      input_tag_2 = document.getElementById("text-7")
+      
+            function ChangeText_7()
+            {
+                input_tag_2.value = "Ram"
+            }
+            
+     input_tag_3 = document.getElementById("text-8")
+     
+            function ChangeText_8()
+            {
+                input_tag_3.value = "9510865372"
+            }
+
+     input_tag_4 = document.getElementById("text-9")
+     
+            function ChangeText_9()
+            {
+                input_tag_4.value = "ramutsav702@gmail.com"
+            }
+
+     input_tag_5 = document.getElementById("text-10")
+     
+             function ChangeText_10()
+             {
+                input_tag_5.value = "Ahemdabad Gujrat"
+             }
+    </script>
+</body>
+</html>
