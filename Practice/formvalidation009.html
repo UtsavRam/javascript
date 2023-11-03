@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>        
+    input:focus
+    {
+        outline: none;
+    }
+   </style>
+<body>
+<form action="">
+   First Name :- <input type="text" id="inp1" onkeyup="Name(inp1,error)" onblur="validate(inp1,error)"> 
+    <span id="error"></span> <br>
+
+   last  Name  :- <input type="text" id="inp2" onblur="validate(inp2,error2)">  
+    <span id="error2"></span> <br>
+
+
+   Emial  :- <input type="email" id="inp3" onblur="validate(inp3,error3)">  
+    <span id="error3"></span>
+
+</form>
+
+    <script>
+
+     
+
+         function validate(x, y) 
+         {
+             if (x.value == "") 
+            {
+                y.innerHTML = "*Reqvaride"
+                y.style.color = "red"
+                x.style.border = "3px solid red"
+            }
+             
+            else
+            {
+                y.innerHTML = ""
+                x.style.border = "3px solid green"
+            }
+        }
+
+        leter = /[A-Za-z]+/
+
+         function Name(x,y)
+         {
+            if(!leter.test(x.value))
+            {
+                y.innerHTML = "Leters only"
+                y.style.color = "red"
+                x.style.border = "3px solid red"
+            }
+            else
+            {
+                y.innerHTML = ""
+                x.style.border = "3px solid green" 
+            }
+         }
+
+
+    </script>
+</body>
+
+</html>
