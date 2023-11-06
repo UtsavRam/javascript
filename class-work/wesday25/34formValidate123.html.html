@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-<form>
-    Firstname:
-    <input type="text" id="inp1" onblur="Validate(inp1,nmErr)">
-    <span id="nmErr"></span>
+    <form>
+        Firstname:
+        <input type="text" id="inp1" onblur="Validate(inp1,nmErr)">
+        <span id="nmErr"></span>
 
-    <br>
+        <br>
 
-    <!-- Lastname:
+        <!-- Lastname:
     <input type="text" id="inp2" onblur=" Validate(inp2,nmErr1)">
     <span id="nmErr1"></span> -->
 
-    <!-- <input type="submit" > -->
+        <!-- <input type="submit" > -->
 
-   </form>
-    
+    </form>
+
     <script>
-// [a-zA-Z]+
+        // [a-zA-Z]+
 
-    nmEx=  /[a-zA-Z]+/
+        nmEx = /^[a-zA-Z]+$/
 
-    // niravpate31211@gmail.co.net
-
-   
+        // niravpate31211@gmail.co.net
 
 
-    function Validate(x,y)
-        {
+
+
+        function Validate(x, y) {
             console.log(x)
             console.log(y)
-            if(x.value == "")
-            {
-                y.innerHTML ="*Required"
-                y.style.color ="red"
+            if (x.value == "") {
+                y.innerHTML = "*Required"
+                y.style.color = "red"
                 x.style.border = "3px solid red"
             }
-            else if(!nmEx.test(x.value))
-            {
-                y.innerHTML ="*Letters only..!"
-                y.style.color ="red"
+            else if (!nmEx.test(x.value)) {
+                y.innerHTML = "*Letters only..!"
+                y.style.color = "red"
             }
-            else 
-            {
-                y.innerHTML =""
+            else {
+                y.innerHTML = ""
                 x.style.border = "3px solid green"
             }
         }
 
     </script>
 </body>
+
 </html>

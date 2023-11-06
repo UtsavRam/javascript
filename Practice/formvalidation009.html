@@ -17,13 +17,14 @@
    First Name :- <input type="text" id="inp1" onkeyup="Name(inp1,error)" onblur="validate(inp1,error)"> 
     <span id="error"></span> <br>
 
-   last  Name  :- <input type="text" id="inp2" onblur="validate(inp2,error2)">  
+   last  Name  :- <input type="text" id="inp2" onkeyup="Name(inp2,error2)" onblur="validate(inp2,error2)">  
     <span id="error2"></span> <br>
 
 
-   Emial  :- <input type="email" id="inp3" onblur="validate(inp3,error3)">  
+   Emial  :- <input type="email" id="inp3" onkeypress="Emial(inp3,error3)" onblur="validate(inp3,error3)">  
     <span id="error3"></span>
 
+    
 </form>
 
     <script>
@@ -46,13 +47,32 @@
             }
         }
 
-        leter = /[A-Za-z]+/
+        leter = /^[A-Z a-z]{4,}$/;
+
+        
 
          function Name(x,y)
          {
             if(!leter.test(x.value))
             {
                 y.innerHTML = "Leters only"
+                y.style.color = "red"
+                x.style.border = "3px solid red"
+            }
+            else
+            {
+                y.innerHTML = ""
+                x.style.border = "3px solid green" 
+            }
+         }
+
+         leter1= /^[a-zA-Z0-9._-]+@[a-zA-Z.]+[a-zA-Z]{2,4}$/;
+
+         function Emial(x,y)
+         {
+            if(!leter1.test(x.value))
+            {
+                y.innerHTML = "Metch The Patten"
                 y.style.color = "red"
                 x.style.border = "3px solid red"
             }
