@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.music-player {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.player-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+#play-pause-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#play-pause-button:hover {
+    background-color: #0056b3;
+}
+
+#volume-slider {
+    width: 100%;
+}
+
+.playlist {
+    text-align: left;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+li:hover {
+    background-color: #eee;
+}
+
+    </style>
+</head>
+<body>
+    <div class="music-player">
+        <div class="player-controls">
+            <h1>Music Player</h1>
+            <audio id="audio-player" controls>
+                <source src="../../../../Downloads/90s old is Gold lofi sings (Sowed  Reverd)songs new lofi song hindi lofi song No copyright.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+                <button id="play-pause-button">Play</button>
+                <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+        <div class="playlist">
+            <h2>Playlist</h2>
+            <ul id="playlist-list">
+                <li data-src="song1.mp3">Song 1</li>
+                <li data-src="song2.mp3">Song 2</li>
+                <li data-src="song3.mp3">Song 3</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const audioPlayer = document.getElementById("audio-player");
+    const playPauseButton = document.getElementById("play-pause-button");
+    const volumeSlider = document.getElementById("volume-slider");
+    const playlistList = document.getElementById("playlist-list");
+    const playlistItems = playlistList.getElementsByTagName("li");
+
+    let currentIndex = 0;
+
+    // Play or pause the audio
+    playPauseButton.addEventListener("click", function () {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playPauseButton.textContent = "Pause";
+        } else {
+            audioPlayer.pause();
+            playPauseButton.textContent = "Play";
+        }
+    });
+
+    // Change the audio source and play the selected song
+    playlistList.addEventListener("click", function (e) {
+        if (e.target && e.target.tagName === "LI") {
+            const newIndex = Array.from(playlistItems).indexOf(e.target);
+            if (newIndex !== currentIndex) {
+                currentIndex = newIndex;
+                audioPlayer.src = e.target.getAttribute("data-src");
+                audioPlayer.play();
+                playPauseButton.textContent = "Pause";
+            }
+        }
+    });
+
+    // Adjust the volume
+    volumeSlider.addEventListener("input", function () {
+        audioPlayer.volume = parseFloat(volumeSlider.value);
+    });
+
+    // Update the play/pause button when the audio ends
+    audioPlayer.addEventListener("ended", function () {
+        playPauseButton.textContent = "Play";
+    });
+});
+
+    </script>
+</body>
+</html>
