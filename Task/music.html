@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- ///////////////////////////// music ==> 1 /////////////////// -->
+    <div class="maindiv">
     <div class="contenar">
         <div class="music-player">
          <nav>
-            <div class="cricle">
+            <div class="cricle">  
                 <i class="fa-solid fa-angle-left"></i>            
             </div>
             <div class="cricle">
@@ -35,6 +37,39 @@
             </div>
         </div>
     </div>
+</div>
+
+
+     <!-- ///////////////////////////// music ==> 1 ///////////////////  -->
+ <div class="maindiv2">
+    <div class="contenar">
+        <div class="music-player">
+         <nav>
+            <div class="cricle">
+                <i class="fa-solid fa-angle-left"></i>            
+            </div>
+            <div class="cricle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+         </nav>
+         <img src="../Images/arjit-img.jpg" class="song-img">
+         <h1>Give me Some Time</h1>
+         <p>3 Idiots </p>
+
+         <audio  id="song">
+            <source src="../Music/Give Me Some Sunshine - 3 Idiots _ Aamir Khan, Madhavan, Sharman J _ Suraj Jagan _ Shantanu Moitra.mp3">
+         </audio>
+
+            <input type="range" value="0" id="progres"> 
+
+            <div class="controls">
+                <div><i class="fa-solid fa-backward-step"></i></div>
+                <div onclick="playpause()"><i class="fa-solid fa-play" id="ctrlicon"></i></div>
+                <div onclick=" music2()"><i class="fa-solid fa-forward-step"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
     <script>
  
         let progres = document.getElementById("progres");
@@ -77,8 +112,23 @@
             song.currentTime = progres.value;
             ctrlicon.classList.add("fa-pause");
             ctrlicon.classList.remove("fa-play");
+        } 
+        
+        var maindiv = document.querySelector('.maindiv');
+        var maindiv2 = document.querySelector('.maindiv2');
+
+        maindiv2.style.display = "none"
+
+        function music()
+        {
+            maindiv.style.display = "block"
+            maindiv2.style.display = "none"
         }
-     
-    </script>
+        function music2()
+        {
+            maindiv2.style.display = "block"
+            maindiv.style.display = "none"
+        }
+    </script> 
 </body>
 </html>
