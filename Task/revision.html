@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        const name = {
+            firstName: "Utsav",
+            lastName: "Ram",
+
+            fullname: function test() {
+                console.log(this.firstName);
+                return (this.firstName + " " + this.lastName);
+            },
+
+            fullname2: function () {
+                console.log(this.lastName);
+                return (this.firstName + " " + this.lastName);
+            },
+
+            fullname3: () => 
+            {
+                return (this.firstName + " " + this.lastName);
+            }
+        }
+
+        console.log(name.fullname());
+        console.log(name.fullname2());
+        console.log(name.fullname3());
+    </script>
+</body>
+</html>
