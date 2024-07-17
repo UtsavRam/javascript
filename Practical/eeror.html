@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp" oninput="myfucntion()">
+    <p id="para"></p>
+
+
+    <script>
+        function myfucntion() {
+           let inp_value =  document.getElementById("inp").value
+           document.getElementById("para").innerHTML =  inp_value
+        }
+    </script>
+</body>
+</html>
